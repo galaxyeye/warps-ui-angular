@@ -1,0 +1,366 @@
+<div class="search-box twelve columns">
+  <div class="form-wrapper">
+    <form class="">
+      <span class="input"><input #pageUrl value="" class="large" type="text" /></span>
+      <span class="submit"><button (click)="run(pageUrl.value); pageUrl.value=''" type="submit">Run</button></span>
+    </form>
+  </div>
+</div>
+
+<div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="fetch()">Fetch</button>
+  <button (click)="parse()">Parse</button>
+  <button (click)="index()">Index</button>
+  <button (click)="fetchOutPages()">Fetch Out Pages</button>
+  <button (click)="parseOutPages()">Parse Out Pages</button>
+  <button (click)="indexOutPages()">Index Out Pages</button>
+  <button (click)="injectOutPages()">Inject Out Pages</button>
+  <button (click)="unInjectOutPages()">UnInject Out Pages</button>
+</div>
+
+<div class="view page" *ngIf="page">
+  <h2>{{page.contentTitle}}</h2>
+
+  <dl>
+    <dt>Target Url</dt>
+    <dd>
+      {{targetUrl}}
+      &nbsp;
+    </dd>
+
+    <dt>pageTitle</dt>
+    <dd>
+      {{page.pageTitle}}
+      &nbsp;
+    </dd>
+
+    <dt>pageText</dt>
+    <dd>
+      {{page.pageText}}
+      &nbsp;
+    </dd>
+
+    <dt>contentTitle</dt>
+    <dd>
+      {{page.contentTitle}}
+      &nbsp;
+    </dd>
+
+    <dt>contentText</dt>
+    <dd>
+      {{page.contentText}}
+      &nbsp;
+    </dd>
+
+    <dt>contentTextLength</dt>
+    <dd>
+      {{page.contentTextLength}}
+      &nbsp;
+    </dd>
+
+    <br />
+
+    <dt>Base Url</dt>
+    <dd>
+      {{page.baseUrl}}
+      &nbsp;
+    </dd>
+
+    <dt>Batch Id</dt>
+    <dd>
+      {{page.batchId}}
+      &nbsp;
+    </dd>
+
+    <dt>Status</dt>
+    <dd>
+      {{page.status}}
+      &nbsp;
+    </dd>
+
+    <dt>createTime</dt>
+    <dd>
+      {{page.createTime}}
+      &nbsp;
+    </dd>
+
+    <dt>distance</dt>
+    <dd>
+      {{page.distance}}
+      &nbsp;
+    </dd>
+
+    <dt>fetchCount</dt>
+    <dd>
+      {{page.fetchCount}}
+      &nbsp;
+    </dd>
+
+    <dt>fetchPriority</dt>
+    <dd>
+      {{page.fetchPriority}}
+      &nbsp;
+    </dd>
+
+    <dt>fetchTime</dt>
+    <dd>
+      {{page.fetchTime}}
+      &nbsp;
+    </dd>
+
+    <dt>prevFetchTime</dt>
+    <dd>
+      {{page.prevFetchTime}}
+      &nbsp;
+    </dd>
+
+    <dt>fetchInterval</dt>
+    <dd>
+      {{page.fetchInterval}}
+      &nbsp;
+    </dd>
+
+    <dt>retriesSinceFetch</dt>
+    <dd>
+      {{page.retriesSinceFetch}}
+      &nbsp;
+    </dd>
+
+    <br />
+
+    <dt>modifiedTime</dt>
+    <dd>
+      {{page.modifiedTime}}
+      &nbsp;
+    </dd>
+
+    <dt>prevModifiedTime</dt>
+    <dd>
+      {{page.prevModifiedTime}}
+      &nbsp;
+    </dd>
+
+    <dt>contentModifiedTime</dt>
+    <dd>
+      {{page.contentModifiedTime}}
+      &nbsp;
+    </dd>
+
+    <dt>prevContentModifiedTime</dt>
+    <dd>
+      {{page.prevContentModifiedTime}}
+      &nbsp;
+    </dd>
+
+    <dt>contentPublishTime</dt>
+    <dd>
+      {{page.contentPublishTime}}
+      &nbsp;
+    </dd>
+
+    <dt>prevContentPublishTime</dt>
+    <dd>
+      {{page.prevContentPublishTime}}
+      &nbsp;
+    </dd>
+
+    <dt>refContentPublishTime</dt>
+    <dd>
+      {{page.refContentPublishTime}}
+      &nbsp;
+    </dd>
+
+    <dt>prevRefContentPublishTime</dt>
+    <dd>
+      {{page.prevRefContentPublishTime}}
+      &nbsp;
+    </dd>
+
+    <br />
+
+    <dt>protocolStatus</dt>
+    <dd>
+      {{page.protocolStatus}}
+      &nbsp;
+    </dd>
+
+    <dt>contentType</dt>
+    <dd>
+      {{page.contentType}}
+      &nbsp;
+    </dd>
+
+    <dt>pageCategory</dt>
+    <dd>
+      {{page.pageCategory}}
+      &nbsp;
+    </dd>
+
+    <dt>prevSignature</dt>
+    <dd>
+      {{page.prevSignature}}
+      &nbsp;
+    </dd>
+
+    <dt>signature</dt>
+    <dd>
+      {{page.signature}}
+      &nbsp;
+    </dd>
+
+    <dt>referrer</dt>
+    <dd>
+      {{page.referrer}}
+      &nbsp;
+    </dd>
+
+    <dt>pageCounters</dt>
+    <dd>
+      {{page.pageCounters}}
+      &nbsp;
+    </dd>
+
+    <dt>parseStatus</dt>
+    <dd>
+      {{page.parseStatus}}
+      &nbsp;
+    </dd>
+
+    <dt>contentScore</dt>
+    <dd>
+      {{page.contentScore}}
+      &nbsp;
+    </dd>
+
+    <dt>score</dt>
+    <dd>
+      {{page.score}}
+      &nbsp;
+    </dd>
+
+    <dt>reprUrl</dt>
+    <dd>
+      {{page.reprUrl}}
+      &nbsp;
+    </dd>
+
+    <dt>headers</dt>
+    <dd>
+      {{page.headers}}
+      &nbsp;
+    </dd>
+
+    <dt>oldOutlinks</dt>
+    <dd>
+      {{page.oldOutlinks}}
+      &nbsp;
+    </dd>
+
+    <dt>outlinks</dt>
+    <dd>
+      {{page.outlinks}}
+      &nbsp;
+    </dd>
+
+    <dt>inlinks</dt>
+    <dd>
+      {{page.inlinks}}
+      &nbsp;
+    </dd>
+
+    <dt>markers</dt>
+    <dd>
+      {{page.markers}}
+      &nbsp;
+    </dd>
+
+    <dt>metadata</dt>
+    <dd>
+      {{page.metadata}}
+      &nbsp;
+    </dd>
+  </dl>
+</div>
+
+<div class="view index-doc" *ngIf="indexDocument">
+  <dl>
+    <dt>id</dt>
+    <dd>
+      {{indexDocument.id}}
+      &nbsp;
+    </dd>
+
+    <dt>url</dt>
+    <dd>
+      {{indexDocument.url}}
+      &nbsp;
+    </dd>
+
+    <dt>mime_type</dt>
+    <dd>
+      {{indexDocument.mime_type}}
+      &nbsp;
+    </dd>
+
+    <dt>content_type</dt>
+    <dd>
+      {{indexDocument.content_type}}
+      &nbsp;
+    </dd>
+
+    <dt>seed_url</dt>
+    <dd>
+      {{indexDocument.seed_url}}
+      &nbsp;
+    </dd>
+
+    <dt>content_type</dt>
+    <dd>
+      {{indexDocument.content_type}}
+      &nbsp;
+    </dd>
+
+    <dt>fetch_time_history</dt>
+    <dd>
+      {{indexDocument.fetch_time_history}}
+      &nbsp;
+    </dd>
+
+    <dt>domain</dt>
+    <dd>
+      {{indexDocument.domain}}
+      &nbsp;
+    </dd>
+
+    <dt>host</dt>
+    <dd>
+      {{indexDocument.host}}
+      &nbsp;
+    </dd>
+
+    <dt>last_index_time</dt>
+    <dd>
+      {{indexDocument.last_index_time}}
+      &nbsp;
+    </dd>
+
+    <dt>last_crawl_time</dt>
+    <dd>
+      {{indexDocument.last_crawl_time}}
+      &nbsp;
+    </dd>
+
+    <dt>index_time_history</dt>
+    <dd>
+      {{indexDocument.index_time_history}}
+      &nbsp;
+    </dd>
+
+    <dt>first_crawl_time</dt>
+    <dd>
+      {{indexDocument.first_crawl_time}}
+      &nbsp;
+    </dd>
+  </dl>
+</div>

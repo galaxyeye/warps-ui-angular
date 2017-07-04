@@ -1,0 +1,39 @@
+<div class="home-wrapper">
+  <div class="search-box">
+    <div class="form-wrapper">
+      <form class="">
+        <span class="input"><input #pageUrl value="" class="large" type="text" /></span>
+        <span class="submit"><button (click)="run(pageUrl.value); pageUrl.value=''" type="submit">Run</button></span>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="index pages cl">
+  <table>
+    <thead>
+    <tr>
+      <th data-field="url">Url</th>
+      <th data-field="anchor">Anchor</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let link of outlinks"
+        [class.selected]="link === selectedOutlink"
+        (click)="onSelect(link)">
+      <td class="key">{{link.toUrl}}</td>
+      <td>{{link.anchor}}</td>
+      <td class="actions">
+        <a [routerLink]="['/page']" [queryParams]="{url: link.toUrl}">
+          <i class="material-icons">v</i>
+        </a>
+        <a  class="delete" (click)="delete(link); $event.stopPropagation()" href="">
+          <i class="material-icons">x</i>
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+
+.search-box {
+  position: relative;
+  width: 100%;
+  margin-left: 15px;
+  text-align: left;
+  z-index: 100;
+}
+
+.form-wrapper {
+  min-height: 130px;
+  text-align: left;
+  z-index: 100;
+  position: relative;
+  cursor: default;
+}
+
+.form-wrapper form {
+  position: absolute;
+  bottom: 0;
+}
+
+.form-wrapper form span.input {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  min-width: 560px;
+}
+
+.form-wrapper form input[type=text] {
+  font-size: 16px;
+}
+
+.form-wrapper form button[type=submit] {
+  font-size: 18px;
+}

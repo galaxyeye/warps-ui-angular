@@ -1,0 +1,40 @@
+{
+  "key": "org.warps.pulsar:http/seeds/1",
+  "baseUrl": "http://pulsar.warps.org/seeds/1",
+  "batchId": "",
+  "status": "0 (null)",
+  "protocolStatus": "UNKNOWN_CODE_0, args=[]",
+  "depth": "10000",
+  "pageCategory": "INTERNAL",
+  "fetchCount": "0",
+  "fetchPriority": "1000",
+  "fetchInterval": "PT-316464H-28M-16S",
+  "retriesSinceFetch": "0",
+
+  "seedOpts": "",
+
+  "createTime": "2017-06-13T17:18:19",
+  "prevFetchTime": "1970-01-01T08:00",
+  "fetchTime": "3000-01-01T08:00",
+  "prevModifiedTime": "1970-01-01T08:00",
+  "modifiedTime": "2017-06-13T17:18:19",
+  "prevContentModifiedTime": "1970-01-01T08:00",
+  "contentModifiedTime": "1970-01-01T08:00",
+  "prevContentPublishTime": "1970-01-01T08:00",
+  "contentPublishTime": "1970-01-01T08:00",
+
+  "prevRefContentPublishTime": "1970-01-01T08:00",
+  "refContentPublishTime": "1970-01-01T08:00",
+
+  "pageTitle": "Pulsar Seed Index, Page 1",
+  "contentTitle": "",
+
+  "parseStatus": "unknown/ok (0/unknown), args=[]",
+  "prevSignature": "",
+  "signature": "",
+  "contentScore": "0.0",
+  "score": "0.0",
+  "cash": "0.0",
+
+  "mark iat": "y"
+}

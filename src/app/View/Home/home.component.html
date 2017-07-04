@@ -1,0 +1,12 @@
+<div class="home-wrapper">
+  <div class="search-box">
+    <div class="form-wrapper">
+      <form class="">
+        <span class="input"><input #pageUrl value="ld http://war.163.com/" class="large" type="text" /></span>
+        <span class="submit"><button (click)="run(pageUrl.value); pageUrl.value=''" type="submit">Run</button></span>
+      </form>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
